@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/neverage84/Friend-Finder#readme",
   "dependencies": {
-    "inquirer": "^7.0.0"
+    "express": "^4.17.1",
+    "inquirer": "^7.0.0",
+    "materialize-css": "^1.0.0-rc.2"
   }
 }

@@ -1,4 +1,4 @@
-characters = [
+ var characters = [
     {
         "name": "Leia Skywalker",
         "photo": "../public/images/profile/leia.jpeg",
@@ -98,20 +98,16 @@ characters = [
 
 ]
 
-// {
-//     "name":"Ahmed",
-//     "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-//     "scores":[
-//         5,
-//         1,
-//         4,
-//         4,
-//         5,
-//         1,
-//         2,
-//         5,
-//         4,
-//         1
-//       ]
-//   }
+//global variables to hold all answers
+var A1;
+var A2;
+var A3;
+var A4;
+var A5;
+var A6;
+var A7;
+var A8;
+var A9;
+var A10;
+
   

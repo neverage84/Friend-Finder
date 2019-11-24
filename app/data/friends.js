@@ -144,6 +144,8 @@ function showModal(){
    for (var i = 0; i < FinalScore.length; i++){
        if (MinScore === FinalScore[i]){
             console.log(characters[i]);
+            $("#MatchName").html("<h4>"+ characters[i].name + "</h4>");
+            $("#ImageDiv").html("<img src='" + characters[i].photo + "' >");
             break;
        }
    }

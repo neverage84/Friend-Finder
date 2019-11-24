@@ -1,36 +1,97 @@
 characters = [
     {
-        "name": "Leia",
-        "photo": "../public/images/profile/leia.jpeg"
+        "name": "Leia Skywalker",
+        "photo": "../public/images/profile/leia.jpeg",
         "scores": [
-            4
+            4,
+            2,
+            2,
+            2,
+            3,
+            5,
+            1,
+            1,
+            3,
+            2
         ]
     },
     {
-        "name": "Anakin",
-        "photo": "../public/images/profile/anakin.jpeg"
+        "name": "Anakin Skywalker",
+        "photo": "../public/images/profile/anakin.jpeg",
         "scores": [
+            5,
+            2,
+            2,
+            4,
+            2,
+            1,
+            1,
+            5,
+            3,
             5
         ]
     },
     {
-        "name": "Lando",
-        "photo": "../public/images/profile/lando.jpeg"
+        "name": "Lando Calrissian",
+        "photo": "../public/images/profile/lando.jpeg",
         "scores": [
-            4
+            4,
+            3,
+            1,
+            5,
+            4,
+            1,
+            5,
+            1,
+            5,
+            3
         ]
     },
     {
-        "name": "Luke",
-        "photo": "../public/images/profile/luke.jpeg"
+        "name": "Luke Skywalker",
+        "photo": "../public/images/profile/luke.jpeg",
         "scores": [
-            4
+            4,
+            1,
+            5,
+            1,
+            3,
+            5,
+            1,
+            1,
+            1,
+            1
+        ]
+    },
+    {
+        "name": "Han Solo",
+        "photo": "../public/images/profile/luke.jpeg",
+        "scores": [
+            3,
+            3,
+            1,
+            5,
+            3,
+            2,
+            5,
+            2,
+            5,
+            2
         ]
     },
     {
         "name": "Yoda",
-        "photo": "../public/images/profile/yoda.jpeg"
+        "photo": "../public/images/profile/yoda.jpeg",
         "scores": [
+            1,
+            5,
+            1,
+            1,
+            5,
+            5,
+            1,
+            1,
+            1,
             1
         ]
     }

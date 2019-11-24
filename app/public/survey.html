@@ -31,7 +31,7 @@
                     <h5><b>About You</b></h5>
 
         <!-- FORMS -->
-        <form>
+        <form onsubmit="return false">
                 
           <div class="input-field">
             <i class="material-icons prefix">account_circle</i>
@@ -59,7 +59,7 @@
 
             <div class="input-field col s12">
                     <h5><b>Question 2 </b><br><br>People would say that you have a wisdom of the ages</h5>
-                     <select id="Q2">
+                     <select id="Q2" class="choices">
                        <option value="" disabled selected>Choose your option</option>
                        <option value="1">1 (Strongly Disagree)</option>
                        <option value="2">2</option>
@@ -164,7 +164,7 @@
                        <option value="5">5 (Strongly Agree)</option>  
                      </select> 
              </div>
-             <button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Submit
+             <button class="btn waves-effect waves-light" type="submit" name="action"  id="match">Submit
                     <i class="material-icons right">send</i>
                   </button>
           
@@ -202,49 +202,7 @@
     
         });
       </script>
-      <script>
-       //Adding function to log each button value
-       $("#Q1").change(function() {
-A1 = ($('select#Q1').val());
-console.log(A1);
-});
 
-$("#Q2").change(function() {
-A2 = ($('select#Q2').val());
-console.log(A2);
-});
-$("#Q3").change(function() {
-A3 = ($('select#Q3').val());
-console.log(A3);
-});
-$("#Q4").change(function() {
-A4 = ($('select#Q4').val());
-console.log(A4);
-});
-$("#Q5").change(function() {
-A5 = ($('select#Q5').val());
-console.log(A5);
-});
-$("#Q6").change(function() {
-A6 = ($('select#Q6').val());
-console.log(A6);
-});
-$("#Q7").change(function() {
-A7 = ($('select#Q7').val());
-console.log(A7);
-});
-$("#Q8").change(function() {
-A8 = ($('select#Q8').val());
-console.log(A8);
-});
-$("#Q9").change(function() {
-A9 = ($('select#Q9').val());
-console.log(A9);
-});
-$("#Q10").change(function() {
-A10 = ($('select#Q10').val());
-console.log(A10);
-});
         
           
       </script>

@@ -114,5 +114,15 @@ var A10;
 
 var FinalAnswers = [];
 
+$("#match").on("click", function(event){
+  
+    for (var i = 1; i < 11; i++){
+       FinalAnswers.push(parseInt($("#Q"+ i).val()));
+        
+    }
+    console.log(FinalAnswers);  
+ 
+});
+
 });
   

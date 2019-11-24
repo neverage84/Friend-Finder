@@ -144,6 +144,7 @@ function showModal(){
    for (var i = 0; i < FinalScore.length; i++){
        if (MinScore === FinalScore[i]){
             console.log(characters[i]);
+            break;
        }
    }
 }

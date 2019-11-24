@@ -109,7 +109,7 @@ $("#match").on("click", function(event){
         
     }
     console.log(FinalAnswers);  
-  if (FinalAnswers.includes(NaN)){
+  if (FinalAnswers.includes(NaN) || $("#name").val() === "" || $("#photo").val() === "" ){
       FinalAnswers = [];
       alert("Please Complete Questions");
   }

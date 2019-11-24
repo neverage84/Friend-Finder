@@ -100,18 +100,6 @@ $(document).ready(function() {
 
 ]
 
-//global variables to hold all answers
-var Q1;
-var A2;
-var A3;
-var A4;
-var A5;
-var A6;
-var A7;
-var A8;
-var A9;
-var A10;
-
 var FinalAnswers = [];
 
 $("#match").on("click", function(event){
@@ -121,8 +109,35 @@ $("#match").on("click", function(event){
         
     }
     console.log(FinalAnswers);  
- 
+  if (FinalAnswers.includes(NaN)){
+      FinalAnswers = [];
+      alert("Please Complete Questions");
+  }
+  else {
+      Match();
+  }
 });
+
+var sum = 0;
+var comparison=[];
+var FinalScore = [];
+function Match(){
+    for (var i = 0; i < characters.length; i++){
+        comparison = characters[i].scores;
+        console.log(comparison);
+        for ( var j = 0; j < 10; j++){
+            sum += Math.abs(comparison[j] - FinalAnswers[j]);
+        
+        }
+      FinalScore.push(sum);
+        sum = 0;  
+    }
+
+    console.log(FinalScore);
+
+    
+}
+
 
 });
   

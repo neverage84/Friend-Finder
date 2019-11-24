@@ -18,47 +18,45 @@
       </head>
   <body>
       <div class="container">
-        <h3>Friend Finder Questions</h3>
-        <div class="divider"></div>
-        <h4>About You</h4>
+        <div class="card">
+            <div class="card-content">
+            <h3>Friend Finder Questions</h3>
+                <div class="divider"></div>
+                <h5><b>About You</b></h5>
         <!-- FORMS -->
         <form>
-                <div class="input-field col s12">
-                        <select multiple>
-                          <option value="" disabled selected>Choose your option</option>
-                          <option value="1">Option 1</option>
-                          <option value="2">Option 2</option>
-                          <option value="3">Option 3</option>
-                        </select>
-                        <label>Materialize Multiple Select</label>
-                      </div>
-                      <br><br>
-              
+                
           <div class="input-field">
+            <i class="material-icons prefix">account_circle</i>
             <input type="text" id="name">
             <label class="active" for="name">Name (Required)</label>
           </div>
           <div class="input-field">
-                <input type="text" id="name">
-                <label class="active" for="name">Link to Photo (Required)</label>
+                <i class="material-icons prefix">add_a_photo</i>
+                <input type="text" id="photo">
+                <label class="active" for="photo">Link to Photo (Required)</label>
               </div>
               <div class="divider"></div>
 
-              <div class="input-field col s4">
-                    <select>
+            <div class="input-field col s12">
+                   <h5><b>Question 1 </b><br><br>You are often driven by your emotions</h5>
+                    <select id="Q1">
                       <option value="" disabled selected>Choose your option</option>
                       <option value="1">Option 1</option>
                       <option value="2">Option 2</option>
                       <option value="3">Option 3</option>
-                    </select>
-                    <label>Materialize Select</label>
+                    </select> 
+                  
+                    
                   </div>
             
-        </div>
+                </div>
 
 
 
         </form>
+            </div>
+        </div>
     </div>
  
       <!--Import jQuery before materialize.js-->
@@ -78,11 +76,17 @@
           $('select').formSelect();
 
           // Init Sidenav
-          $('.button-collapse').sideNav();
+          
 
        
     
         });
+      </script>
+      <script>
+          $("#Q1").on("click",function(event){
+             console.log($("#Q1").val()); 
+          })
+          
       </script>
     </body>
 </html>

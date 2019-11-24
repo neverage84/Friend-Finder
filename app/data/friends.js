@@ -134,10 +134,19 @@ function Match(){
     }
 
     console.log(FinalScore);
-
+    showModal();
     
 }
 
+function showModal(){
+   var MinScore = Math.min.apply(Math, FinalScore);
+   console.log(MinScore);
+   for (var i = 0; i < FinalScore.length; i++){
+       if (MinScore === FinalScore[i]){
+            console.log(characters[i]);
+       }
+   }
+}
 
 });
   

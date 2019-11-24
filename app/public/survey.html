@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!--CSS style sheet link-->
    <link rel="stylesheet" href="style.css">
+
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <!-- JS local files link -->
-   <script src="../data/friends.js"></script>
-   <script src="../routing/htmlRoutes.js"></script>
-   <script src="../routing/apiRoutes.js"></script>
+   <script type="text/javascript" src="../data/friends.js"></script>
+   <script type="text/javascript" src="../routing/htmlRoutes.js"></script>
+   <script type="text/javascript" src="../routing/apiRoutes.js"></script>
    
             
 
@@ -45,7 +47,7 @@
 
             <div class="input-field col s12">
                    <h5><b>Question 1 </b><br><br>You are often driven by your emotions</h5>
-                    <select id="Q1">
+                    <select id="Q1" class="choices">
                       <option value="" disabled selected>Choose your option</option>
                       <option value="1">1 (Strongly Disagree)</option>
                       <option value="2">2</option>
@@ -93,7 +95,7 @@
 
              <div class="input-field col s12">
                     <h5><b>Question 5 </b><br><br>Patience is the key to success</h5>
-                     <select id="Q5">
+                     <select id="Q5" >
                        <option value="" disabled selected>Choose your option</option>
                        <option value="1">1 (Strongly Disagree)</option>
                        <option value="2">2</option>
@@ -162,9 +164,10 @@
                        <option value="5">5 (Strongly Agree)</option>  
                      </select> 
              </div>
-             <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+             <button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Submit
                     <i class="material-icons right">send</i>
                   </button>
+          
         </div>
  
 
@@ -177,8 +180,7 @@
     </div>
  
       <!--Import jQuery before materialize.js-->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    
+     
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script>
 
@@ -201,7 +203,7 @@
         });
       </script>
       <script>
-       
+       //Adding function to log each button value
        $("#Q1").change(function() {
 A1 = ($('select#Q1').val());
 console.log(A1);

@@ -1,3 +1,5 @@
+$(document).ready(function() {
+ 
  var characters = [
     {
         "name": "Leia Skywalker",
@@ -99,7 +101,7 @@
 ]
 
 //global variables to hold all answers
-var A1;
+var Q1;
 var A2;
 var A3;
 var A4;
@@ -110,4 +112,7 @@ var A8;
 var A9;
 var A10;
 
+var FinalAnswers = [];
+
+});
   

@@ -46,9 +46,9 @@
                       <option value="2">2</option>
                       <option value="3">3</option>
                       <option value="4">4</option>
-                      <option value="5">5 (Strongly Agree)</option>
+                      <option value="5">5 (Strongly Agree)</option>  
                     </select> 
-                  
+                
                     
                   </div>
             
@@ -76,7 +76,7 @@
           $('.carousel.carousel-slider').carousel({fullWidth:true});
 
           $('select').formSelect();
-
+         
           // Init Sidenav
           
 
@@ -85,9 +85,11 @@
         });
       </script>
       <script>
-          $("#Q1").on("click",function(event){
-             console.log($("#Q1").val()); 
-          })
+       
+       $("#Q1").change(function() {
+console.log($('select#Q1').val());
+});
+        
           
       </script>
     </body>

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+
  
  var characters = [
     {
@@ -100,7 +100,11 @@ $(document).ready(function() {
 
 ]
 
+module.exports = charactersArray;
+
 var FinalAnswers = [];
+
+$(document).ready(function() {
 
 $("#match").on("click", function(event){
   

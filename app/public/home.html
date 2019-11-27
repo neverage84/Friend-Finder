@@ -1,99 +1,135 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Friend Finder</title>
-         <!--Import Google Icon Font-->
-         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-         <!--Import materialize.css-->
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-
-          <!--CSS style sheet link-->
-          <link rel="stylesheet" href="style.css">
-
-          <!-- JS local files link -->
-            <script src="../../server.js"></script>
-          <script src="../data/friends.js"></script>
-          <script src="../routing/apiRoutes.js"></script>
-          <script src="../routing/htmlRoutes.js"></script>
-   
-         <!--Let browser know website is optimized for mobile-->
-         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      </head>
-  <body>
-
-<div class="container white">
-      <!-- SLIDER -->
-      <h1 class="WebTitle"><i class="material-icons medium left">favorite</i> Friend Finder</h1>
-
-      <div class="slider">
-        <ul class="slides">
-          <li>
-            <img src="images/beachFriends.jpg" alt="">
-            <div class="caption center-align">
-              <h2 class="">Welcome to Friend Finder!</h2>
-            </div>
-          </li>
-          <li>
-            <img src="images/fingerLink.jpeg" alt="">
-            <div class="caption left-align">
-              <h3>Simply answer a few basic questions.</h3>
-             </div>
-          </li>
-          <li>
-                <img src="images/coupleDarkBG.jpeg" alt="">
-                <div class="caption left-align">
-                  <h3>Then find the friend with the greatest compatibility!</h3>
-                 </div>
-              </li>
-          <li>
-            <img src="images/natureCouple.jpeg" alt="">
-            <div class="caption right-align">
-              <h3>Because it all started with friendship...</h3>
-            </div>
-          </li>
-        </ul>
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Friend Finder</title>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+      <!--CSS style sheet link-->
+      <link rel="stylesheet" href="style.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   </head>
+   <body>
+      <div class="container white">
+         <!-- SLIDER -->
+         <h1 class="WebTitle"><i class="material-icons medium left">favorite</i> Friend Finder</h1>
+         <div class="slider">
+            <ul class="slides">
+               <li>
+                  <img src="images/beachFriends.jpg" alt="">
+                  <div class="caption center-align">
+                     <h2 class="">Welcome to Friend Finder!</h2>
+                  </div>
+               </li>
+               <li>
+                  <img src="images/fingerLink.jpeg" alt="">
+                  <div class="caption left-align">
+                     <h3>Simply answer a few basic questions.</h3>
+                  </div>
+               </li>
+               <li>
+                  <img src="images/coupleDarkBG.jpeg" alt="">
+                  <div class="caption left-align">
+                     <h3>Then find the friend with the greatest compatibility!</h3>
+                  </div>
+               </li>
+               <li>
+                  <img src="images/natureCouple.jpeg" alt="">
+                  <div class="caption right-align">
+                     <h3>Because it all started with friendship...</h3>
+                  </div>
+               </li>
+            </ul>
+         </div>
+         <a href="/survey"><button class="btn btn-large"><i class="material-icons left waves-effect waves">assignment</i>Take Survey</button></a>
+         <br>
+         <ul id="slide-out" class="side-nav">
+            <li>
+               <a href=""><i class="material-icons">cloud</i> API Friends List</a>
+            </li>
+            <li>
+               <a href="https://github.com/neverage84/Friend-Finder"><i class="material-icons">build</i>Github Repo</a>
+            </li>
+         </ul>
+         <a href="" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
-      <a href="/survey"><button class="btn btn-large"><i class="material-icons left waves-effect waves">assignment</i>Take Survey</button></a>
-      <br>
-      <ul id="slide-out" class="side-nav">
-            <li>
-              <a href="#"><i class="material-icons">cloud</i> API Friends List</a>
-            </li>
-            <li>
-              <a href="#"><i class="material-icons">build</i>Github Repo</a>
-            </li>
-            
-          </ul>
-          <a href="" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-          
-    </div>
-   
-   
-
- 
       <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>\
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+      
       <script>
-        $(document).ready(function(){
-          // Init Carousel
-          $('.carousel').carousel();
+         $(document).ready(function () {
+              // Init Carousel
+              $('.carousel').carousel();
 
-          // Init Carousel Slider
-          $('.carousel.carousel-slider').carousel({fullWidth:true});
+              // Init Carousel Slider
+              $('.carousel.carousel-slider').carousel({
+                fullWidth: true
+              });
 
-          // Fire off toast
-          //Materialize.toast('Hello World', 3000);
+              // Fire off toast
+              //Materialize.toast('Hello World', 3000);
 
-          // Init Slider
-          $('.slider').slider();
+              // Init Slider
+              $('.slider').slider();
 
-          // Init Modal
-          $('.modal').modal();
+              // Init Modal
+              $('.modal').modal();
 
-          // Init Sidenav
-          $('.button-collapse').sideNav();
-        });
+              // Init Sidenav
+              $('.button-collapse').sideNav();
+            });
+            var FinalAnswers = [];
+            $("#match").on("click", function (event) {
+
+              for (var i = 1; i < 11; i++) {
+                FinalAnswers.push(parseInt($("#Q" + i).val()));
+
+              }
+              console.log(FinalAnswers);
+              if (FinalAnswers.includes(NaN) || $("#name").val() === "" || $("#photo").val() === "") {
+                FinalAnswers = [];
+                alert("Please Complete Questions");
+              } else {
+                Match();
+              }
+            });
+
+            var sum = 0;
+            var comparison = [];
+            var FinalScore = [];
+
+            function Match() {
+              for (var i = 0; i < characters.length; i++) {
+                comparison = characters[i].scores;
+                console.log(comparison);
+                for (var j = 0; j < 10; j++) {
+                  sum += Math.abs(comparison[j] - FinalAnswers[j]);
+
+                }
+                FinalScore.push(sum);
+                sum = 0;
+              }
+
+              console.log(FinalScore);
+              showModal();
+
+            }
+
+            function showModal() {
+              var MinScore = Math.min.apply(Math, FinalScore);
+              console.log(MinScore);
+              for (var i = 0; i < FinalScore.length; i++) {
+                if (MinScore === FinalScore[i]) {
+                  console.log(characters[i]);
+                  $("#MatchName").html("<h4>" + characters[i].name + "</h4>");
+                  $("#ImageDiv").html("<img src='" + characters[i].photo + "' >");
+                  break;
+                }
+              }
+            }
       </script>
-    </body>
+   </body>
 </html>

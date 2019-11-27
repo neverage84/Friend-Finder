@@ -3,7 +3,7 @@
  var characters = [
     {
         "name": "Leia Skywalker",
-        "photo": "../public/images/profile/leia.jpeg",
+        "photo": "images/profile/leia.jpeg",
         "scores": [
             4,
             2,
@@ -98,11 +98,11 @@
         ]
     }
 
-]
+];
 
-module.exports = charactersArray;
+module.exports = characters;
 
-var FinalAnswers = [];
+/*var FinalAnswers = [];
 
 $(document).ready(function() {
 
@@ -155,5 +155,5 @@ function showModal(){
    }
 }
 
-});
+});*/
   

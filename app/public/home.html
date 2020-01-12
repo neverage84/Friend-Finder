@@ -3,7 +3,7 @@
    <head>
       <title>Friend Finder</title>
       <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
       
@@ -52,7 +52,8 @@
                <a href="https://github.com/neverage84/Friend-Finder"><i class="material-icons">build</i>Github Repo</a>
             </li>
          </ul>
-         <a href="" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+         <br>
+         <a href="" data-activates="slide-out" class="button-collapse btn btn-large blue-grey"><i class="material-icons left waves-effect waves">menu</i>Side Nav</a>
       </div>
 
       <style>
@@ -93,55 +94,7 @@
               // Init Sidenav
               $('.button-collapse').sideNav();
             });
-            var FinalAnswers = [];
-            $("#match").on("click", function (event) {
-
-              for (var i = 1; i < 11; i++) {
-                FinalAnswers.push(parseInt($("#Q" + i).val()));
-
-              }
-              console.log(FinalAnswers);
-              if (FinalAnswers.includes(NaN) || $("#name").val() === "" || $("#photo").val() === "") {
-                FinalAnswers = [];
-                alert("Please Complete Questions");
-              } else {
-                Match();
-              }
-            });
-
-            var sum = 0;
-            var comparison = [];
-            var FinalScore = [];
-
-            function Match() {
-              for (var i = 0; i < characters.length; i++) {
-                comparison = characters[i].scores;
-                console.log(comparison);
-                for (var j = 0; j < 10; j++) {
-                  sum += Math.abs(comparison[j] - FinalAnswers[j]);
-
-                }
-                FinalScore.push(sum);
-                sum = 0;
-              }
-
-              console.log(FinalScore);
-              showModal();
-
-            }
-
-            function showModal() {
-              var MinScore = Math.min.apply(Math, FinalScore);
-              console.log(MinScore);
-              for (var i = 0; i < FinalScore.length; i++) {
-                if (MinScore === FinalScore[i]) {
-                  console.log(characters[i]);
-                  $("#MatchName").html("<h4>" + characters[i].name + "</h4>");
-                  $("#ImageDiv").html("<img src='" + characters[i].photo + "' >");
-                  break;
-                }
-              }
-            }
+  
       </script>
    </body>
 </html>

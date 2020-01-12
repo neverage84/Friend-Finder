@@ -1,7 +1,8 @@
 // Dependencies
 // =============================================================
 var express = require("express");
-//var path = require("path");
+var path = require("path");
+
 
 // Sets up the Express App
 // =============================================================
@@ -19,7 +20,7 @@ console.log(__dirname + "/app/public");
 app.use(express.static(__dirname + "/app/public"));
 
 require("./app/routing/htmlRoutes")(app);
-require("./app/routing/apiRoutes")(app);
+// require("./app/routing/apiRoutes")(app);
 
 
 app.listen(PORT, function() {

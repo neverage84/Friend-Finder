@@ -1,6 +1,6 @@
 
  
- var characters = [
+ var friends = [
     {
         "name": "Leia Skywalker",
         "photo": "images/profile/leia.jpeg",
@@ -100,60 +100,60 @@
 
 ];
 
-module.exports = characters;
+module.exports = friends;
 
-/*var FinalAnswers = [];
+// var FinalAnswers = [];
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
-$("#match").on("click", function(event){
+// $("#match").on("click", function(event){
   
-    for (var i = 1; i < 11; i++){
-       FinalAnswers.push(parseInt($("#Q"+ i).val()));
+//     for (var i = 1; i < 11; i++){
+//        FinalAnswers.push(parseInt($("#Q"+ i).val()));
         
-    }
-    console.log(FinalAnswers);  
-  if (FinalAnswers.includes(NaN) || $("#name").val() === "" || $("#photo").val() === "" ){
-      FinalAnswers = [];
-      alert("Please Complete Questions");
-  }
-  else {
-      Match();
-  }
-});
+//     }
+//     console.log(FinalAnswers);  
+//   if (FinalAnswers.includes(NaN) || $("#name").val() === "" || $("#photo").val() === "" ){
+//       FinalAnswers = [];
+//       alert("Please Complete Questions");
+//   }
+//   else {
+//       Match();
+//   }
+// });
 
-var sum = 0;
-var comparison=[];
-var FinalScore = [];
-function Match(){
-    for (var i = 0; i < characters.length; i++){
-        comparison = characters[i].scores;
-        console.log(comparison);
-        for ( var j = 0; j < 10; j++){
-            sum += Math.abs(comparison[j] - FinalAnswers[j]);
+// var sum = 0;
+// var comparison=[];
+// var FinalScore = [];
+// function Match(){
+//     for (var i = 0; i < characters.length; i++){
+//         comparison = characters[i].scores;
+//         console.log(comparison);
+//         for ( var j = 0; j < 10; j++){
+//             sum += Math.abs(comparison[j] - FinalAnswers[j]);
         
-        }
-      FinalScore.push(sum);
-        sum = 0;  
-    }
+//         }
+//       FinalScore.push(sum);
+//         sum = 0;  
+//     }
 
-    console.log(FinalScore);
-    showModal();
+//     console.log(FinalScore);
+//     showModal();
     
-}
+// }
 
-function showModal(){
-   var MinScore = Math.min.apply(Math, FinalScore);
-   console.log(MinScore);
-   for (var i = 0; i < FinalScore.length; i++){
-       if (MinScore === FinalScore[i]){
-            console.log(characters[i]);
-            $("#MatchName").html("<h4>"+ characters[i].name + "</h4>");
-            $("#ImageDiv").html("<img src='" + characters[i].photo + "' >");
-            break;
-       }
-   }
-}
+// function showModal(){
+//    var MinScore = Math.min.apply(Math, FinalScore);
+//    console.log(MinScore);
+//    for (var i = 0; i < FinalScore.length; i++){
+//        if (MinScore === FinalScore[i]){
+//             console.log(characters[i]);
+//             $("#MatchName").html("<h4>"+ characters[i].name + "</h4>");
+//             $("#ImageDiv").html("<img src='" + characters[i].photo + "' >");
+//             break;
+//        }
+//    }
+// }
 
-});*/
+// });
   

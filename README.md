@@ -5,7 +5,7 @@ This full-stack site will take in results from users' surveys, then compare thei
 
 The survey has 10 questions. Each answer is on a scale of 1 to 5 based on how much the user agrees or disagrees with a question.
 
-![Alt Text](https://github.com/neverage84/MongoDBScraper/blob/master/Mongo%20Scraper.gif?raw=true)
+![Alt Text](https://github.com/neverage84/Friend-Finder/blob/master/Friend%20Finder.gif?raw=true)
 
 # TECHNOLOGIES USED
 Express and Path are used to handle routing. This app also uses Javascript, Materialize CSS,Heroku, and NodeJS.

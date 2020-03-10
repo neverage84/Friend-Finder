@@ -1,10 +1,18 @@
 # Friend-Finder
 
-Friend Finder - Node and Express Servers
+# Overview
+In this activity, you'll build a compatibility-based "FriendFinder" application -- basically a dating app. This full-stack site will take in results from users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
 
-Overview
-In this activity, you'll build a compatibility-based "FriendFinder" application -- basically a dating app. This full-stack site will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
-You will use Express to handle routing. Make sure you deploy your app to Heroku so other users can fill it out.
+![Alt Text](https://github.com/neverage84/MongoDBScraper/blob/master/Mongo%20Scraper.gif?raw=true)
+
+# TECHNOLOGIES USED
+Express is used to handle routing. This app also uses Javascript, Materialize CSS,Heroku, and NodeJS.
+
+
+
+
+
+This app has been coded in Javascript and the scraping is done with Cheerio and Axios. HandlebarsJS is used as the frontend framework with Express and Morgan managing the middleware. Node.js, Mongoose.js (ODM), and MongoDB are used for backend data management. The Colors and Styles were brought to you by Materialize CSS and HTML. 
 
 Before You Begin
 
